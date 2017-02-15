@@ -21,7 +21,10 @@ public class Main extends Application {
 		}
 	}
 	
+	
 	public static void main(String[] args) {
+		Appointment appointment = new Appointment();
 		launch(args);
+		System.out.println(appointment.getFormal());
 	}
 }
