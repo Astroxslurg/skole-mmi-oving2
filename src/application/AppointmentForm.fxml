@@ -12,39 +12,117 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Button?>
 
-<GridPane fx:controller="application.AppointmentFormController" hgap="20" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-   	<Label text="Formål:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-       <TextField fx:id="purposeField" prefColumnCount="30" promptText="Formål" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-   	<Label fx:id="nameFieldRule" text="Names can only contain letters, space ..." visible="false" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-   	<Label text="Rom:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-       <TextField fx:id="emailField" prefColumnCount="30" promptText="Bygning + rom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-       <Label text="Dato:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-      <DatePicker fx:id="dateField" promptText="velg startdato" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Label text="start-tid" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-      <Label text="slutt-tid" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField fx:id="startTime" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-      <TextField fx:id="stopTime" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <Label text="Repeter Reservasjon" GridPane.rowIndex="5" />
-      <CheckBox fx:id="repetitionCheckbox" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Label text="Antall reservasjoner:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-      <TextField fx:id="antReservations" disable="true" prefColumnCount="30" promptText="antall" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      <Label text="Repetisjonsfrekvens" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-      <TextField fx:id="freqReservations" disable="true" prefColumnCount="30" promptText="frekvens" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-   </children>
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+<GridPane
+	fx:controller="application.AppointmentFormController"
+	hgap="20"
+	vgap="10"
+	xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	>
+	<children>
+   		<Label
+   			text="Formål:"
+   			GridPane.columnIndex="0"
+   			GridPane.rowIndex="0"
+   			/>
+   		<TextField
+       		fx:id="purposeField"
+       		prefColumnCount="30"
+       		promptText="Formål"
+       		GridPane.columnIndex="1"
+       		GridPane.rowIndex="0"
+       		/>
+   	
+   		<Label
+   			text="Names can only contain letters, space ..."
+   			visible="false"
+   			GridPane.columnIndex="2"
+   			GridPane.rowIndex="0"
+   			/>
+   		<Label
+   			text="Rom:"
+   			GridPane.columnIndex="0"
+   			GridPane.rowIndex="1"
+   			/>
+       	<TextField
+       		fx:id="emailField"
+       		prefColumnCount="30"
+       		promptText="Bygning + rom"
+       		GridPane.columnIndex="1"
+       		GridPane.rowIndex="1"
+       		/>
+       	
+       	<Label
+       		text="Dato:"
+       		GridPane.columnIndex="0"
+       		GridPane.rowIndex="2"
+       		/>
+      	<DatePicker
+      		fx:id="dateField"
+      		promptText="velg startdato"
+      		showWeekNumbers="true"
+      		GridPane.columnIndex="1"
+      		GridPane.rowIndex="2"
+      		/>
+      
+      	<Label
+      		text="start-tid"
+      		GridPane.columnIndex="0"
+      		GridPane.rowIndex="3"
+      		/>
+      	<Label
+      		text="slutt-tid"
+      		GridPane.columnIndex="1"
+      		GridPane.rowIndex="3"
+      		/>
+      		
+      	<TextField
+      		fx:id="startTime"
+      		GridPane.columnIndex="0"
+      		GridPane.rowIndex="4"
+      		/>
+      	<TextField
+      		fx:id="stopTime"
+      		GridPane.columnIndex="1"
+      		GridPane.rowIndex="4"
+      		/>
+      		
+      	<Label
+      		text="Repeter Reservasjon"
+      		GridPane.rowIndex="5"
+      		/>
+      	<CheckBox
+      		fx:id="repetitionCheckbox"
+      		GridPane.columnIndex="1"
+      		GridPane.rowIndex="5"
+      		/>
+      		
+      	<Label
+      		text="Antall reservasjoner:"
+      		GridPane.columnIndex="0"
+      		GridPane.rowIndex="6"
+      		/>
+      	<TextField
+      		fx:id="antReservations"
+      		disable="true"
+      		prefColumnCount="30"
+      		promptText="antall"
+      		GridPane.columnIndex="1"
+      		GridPane.rowIndex="6"
+      		/>
+      	
+      	<Label
+      		text="Repetisjonsfrekvens"
+      		GridPane.columnIndex="0"
+      		GridPane.rowIndex="7"
+      		/>
+      	<TextField
+      		fx:id="freqReservations"
+      		disable="true"
+      		prefColumnCount="30"
+      		promptText="frekvens"
+      		GridPane.columnIndex="1"
+      		GridPane.rowIndex="7"
+      		/>
+   	</children>
 </GridPane>
