@@ -59,6 +59,7 @@ public class AppointmentFormController {
 		}
 	}
 
+	@FXML
 	void dateFieldChange(Event event){
 		LocalDate selectedDate = dateField.getValue();
 		LocalDate currentDate = LocalDate.now();
