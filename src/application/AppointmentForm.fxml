@@ -112,7 +112,7 @@
       		promptText="antall"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="6"
-      		onFocusedChange="#nameFieldChange"
+      		onFocusedChange="#antRepetitionsFieldChange"
       		/>
       	
       	<Label
@@ -127,6 +127,7 @@
       		promptText="frekvens"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="7"
+      		onFocusedChange="#freqRepetitionsFieldChange"
       		/>
    	</children>
 </GridPane>

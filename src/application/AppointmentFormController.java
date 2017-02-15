@@ -31,7 +31,7 @@ public class AppointmentFormController {
 	}
 	
 	@FXML
-	void nameFieldChange(Event event) {
+	void antReservationsFieldChange(Event event) {
 		boolean b = Pattern.matches("\\d+", antReservations.getText());
 			if (!b) {
 				antReservations.setStyle("-fx-control-inner-background: #f55");
@@ -39,6 +39,16 @@ public class AppointmentFormController {
 				antReservations.setStyle("-fx-control-inner-background: #ffffff");
 			}
 	}
+	
+	@FXML
+	void freqReservationsFieldChange(Event event) {
+		boolean b = Pattern.matches("\\d+", freqReservations.getText());
+			if (!b) {
+				freqReservations.setStyle("-fx-control-inner-background: #f55");
+			} else {
+				freqReservations.setStyle("-fx-control-inner-background: #ffffff");
+			}
+	}	
 	
 	@FXML
 	void startTimeChange(Event event) {
