@@ -50,6 +50,7 @@
        		promptText="Bygning + rom"
        		GridPane.columnIndex="1"
        		GridPane.rowIndex="1"
+       		onFocusedChange="#roomFieldChange"
        		/>
        	
        	<Label

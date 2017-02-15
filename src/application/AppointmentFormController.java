@@ -25,6 +25,16 @@ public class AppointmentFormController {
 	@FXML TextField freqReservations;
 	
 	@FXML
+	void roomFieldChange(Event event) {
+		boolean isMatch = Pattern.matches("(\\w|\\s|-)+?\\s(\\d)+", roomField.getText());
+		if (isMatch) {
+			roomField.setStyle("-fx-control-inner-background: #fff");
+		} else {
+			roomField.setStyle("-fx-control-inner-background: #f55");
+		}
+	}
+	
+	@FXML
 	void checkBoxChange(Event event) {
 		antReservations.setDisable(!repetitionCheckbox.isSelected());
 		freqReservations.setDisable(!repetitionCheckbox.isSelected());
