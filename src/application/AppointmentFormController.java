@@ -1,5 +1,8 @@
 package application;
 
+import java.util.regex.Pattern;
+
+import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -22,6 +25,14 @@ public class AppointmentFormController {
 	void checkBoxChange(Event event) {
 		antReservations.setDisable(!repetitionCheckbox.isSelected());
 		freqReservations.setDisable(!repetitionCheckbox.isSelected());
+	}
+	
+	@FXML
+	void nameFieldChange(Event event) {
+		boolean b = Pattern.matches("\\d", antReservations.getText());
+			if (b) {
+				System.out.println(antReservations.getText());
+			}
 	}
 	
 }
