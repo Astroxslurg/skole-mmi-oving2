@@ -24,6 +24,7 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		Appointment appointment = new Appointment();
+		AppointmentFormController controller = new AppointmentFormController();
 		launch(args);
 	}
 }
