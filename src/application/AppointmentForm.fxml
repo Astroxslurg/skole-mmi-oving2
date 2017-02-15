@@ -87,6 +87,7 @@
       		fx:id="stopTime"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="4"
+      		onFocusedChange="#stopTimeChange"
       		/>
       		
       	<Label

@@ -4,6 +4,9 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -48,6 +51,24 @@ public class AppointmentFormController {
 			startTime.setStyle("-fx-control-inner-background: #ff0000");
 		} else {
 			startTime.setStyle("-fx-control-inner-background: #ffffff");
+		}
+	}
+	
+	//Fiks regex og pass på at man ikke får exception.
+	@FXML
+	void stopTimeChange(Event event) {
+		String startTimeString = startTime.getText();
+		int startHours = Integer.parseInt(startTimeString.substring(0,2));
+		int startMinutes = Integer.parseInt(startTimeString.substring(3,4));
+		LocalTime localStartTime = LocalTime.of(startHours, startMinutes);
+		String stopTimeString = stopTime.getText();
+		int stopHours = Integer.parseInt(stopTimeString.substring(0,2));
+		int stopMinutes = Integer.parseInt(stopTimeString.substring(3,4));
+		LocalTime localStopTime = LocalTime.of(startHours, startMinutes);
+		if (localStopTime.isAfter(localStartTime)) {
+			stopTime.setStyle("-fx-control-inner-background: #ff0000");
+		} else {
+			stopTime.setStyle("-fx-control-inner-background: #ffffff");
 		}
 	}
 	
