@@ -1,5 +1,6 @@
 package application;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
@@ -17,6 +18,9 @@ public class AppointmentFormController {
 	@FXML TextField antReservations;
 	@FXML TextField freqReservations;
 	
-	
+	@FXML
+	void checkBoxChange(Event event) {
+		System.out.println(event);
+	}
 	
 }
