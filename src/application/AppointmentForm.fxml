@@ -79,6 +79,7 @@
       		
       	<TextField
       		fx:id="startTime"
+      		onFocusedChange="#startTimeChange"
       		GridPane.columnIndex="0"
       		GridPane.rowIndex="4"
       		/>
@@ -111,6 +112,7 @@
       		promptText="antall"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="6"
+      		onFocusedChange="#nameFieldChange"
       		/>
       	
       	<Label

@@ -1,5 +1,8 @@
 package application;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.time.LocalDate;
 
 import javafx.beans.value.ObservableValue;
@@ -25,6 +28,27 @@ public class AppointmentFormController {
 	void checkBoxChange(Event event) {
 		antReservations.setDisable(!repetitionCheckbox.isSelected());
 		freqReservations.setDisable(!repetitionCheckbox.isSelected());
+	}
+	
+	@FXML
+	void nameFieldChange(Event event) {
+		boolean b = Pattern.matches("\\d", antReservations.getText());
+			if (b) {
+				System.out.println(antReservations.getText());
+			}
+	}
+	
+	@FXML
+	void startTimeChange(Event event) {
+		String currentTextInField = startTime.getText();
+		String pattern = "([0-1][0-9]:[0-5][0-9])|([2][0-1]:[0-5][0-9])";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(currentTextInField);
+		if (!m.matches()) {
+			startTime.setStyle("-fx-control-inner-background: #ff0000");
+		} else {
+			startTime.setStyle("-fx-control-inner-background: #ffffff");
+		}
 	}
 	
 	@FXML
