@@ -1,11 +1,8 @@
 package application;
 
-<<<<<<< HEAD
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-=======
 import java.time.LocalDate;
->>>>>>> 1ffe79e1cf72a65ab6dcee1985a13470636c4665
 
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -34,16 +31,8 @@ public class AppointmentFormController {
 	
 	@FXML
 	void startTimeChange(Event event) {
-		//String currentTextInField = startTime.getText();
-		//if(currentTextInField.length() != 5) {
-		//	startTime.setStyle("-fx-control-inner-background: #ff0000");
-		//} else {
-		//startTime.setStyle("-fx-control-inner-background: #ffffff");
-		//}
-		//System.out.println(startTime.getText());
-		
 		String currentTextInField = startTime.getText();
-		String pattern = "\\d\\d:\\d\\d";
+		String pattern = "([0-1][0-9]:[0-5][0-9])|([2][0-1]:[0-5][0-9])";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(currentTextInField);
 		if (!m.matches()) {
@@ -52,7 +41,8 @@ public class AppointmentFormController {
 			startTime.setStyle("-fx-control-inner-background: #ffffff");
 		}
 	}
-
+	
+	@FXML
 	void dateFieldChange(Event event){
 		LocalDate selectedDate = dateField.getValue();
 		LocalDate currentDate = LocalDate.now();
