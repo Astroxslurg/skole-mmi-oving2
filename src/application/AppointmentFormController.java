@@ -20,7 +20,8 @@ public class AppointmentFormController {
 	
 	@FXML
 	void checkBoxChange(Event event) {
-		System.out.println(event);
+		antReservations.setDisable(!repetitionCheckbox.isSelected());
+		freqReservations.setDisable(!repetitionCheckbox.isSelected());
 	}
 	
 }

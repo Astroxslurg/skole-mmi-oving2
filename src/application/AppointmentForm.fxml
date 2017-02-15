@@ -95,6 +95,7 @@
       		fx:id="repetitionCheckbox"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="5"
+      		onAction="#checkBoxChange"
       		/>
       		
       	<Label
