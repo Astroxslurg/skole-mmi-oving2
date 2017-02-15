@@ -13,7 +13,7 @@ public class AppointmentFormController {
 
 	
 	@FXML TextField purposeField;
-	@FXML TextField emailField;
+	@FXML TextField roomField;
 	@FXML DatePicker dateField;
 	@FXML TextField startTime;
 	@FXML TextField stopTime;
