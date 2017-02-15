@@ -82,11 +82,13 @@
       		onFocusedChange="#startTimeChange"
       		GridPane.columnIndex="0"
       		GridPane.rowIndex="4"
+      		promptText="eks: 09:15"
       		/>
       	<TextField
       		fx:id="stopTime"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="4"
+      		promptText="eks: 14:00"
       		/>
       		
       	<Label
