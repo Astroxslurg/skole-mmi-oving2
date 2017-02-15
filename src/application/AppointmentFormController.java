@@ -32,9 +32,11 @@ public class AppointmentFormController {
 	
 	@FXML
 	void nameFieldChange(Event event) {
-		boolean b = Pattern.matches("\\d", antReservations.getText());
-			if (b) {
-				System.out.println(antReservations.getText());
+		boolean b = Pattern.matches("\\d+", antReservations.getText());
+			if (!b) {
+				antReservations.setStyle("-fx-control-inner-background: #f55");
+			} else {
+				antReservations.setStyle("-fx-control-inner-background: #ffffff");
 			}
 	}
 	
