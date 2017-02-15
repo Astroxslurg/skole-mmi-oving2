@@ -1,7 +1,11 @@
 package application;
 
+<<<<<<< HEAD
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+=======
+import java.time.LocalDate;
+>>>>>>> 1ffe79e1cf72a65ab6dcee1985a13470636c4665
 
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -48,5 +52,15 @@ public class AppointmentFormController {
 			startTime.setStyle("-fx-control-inner-background: #ffffff");
 		}
 	}
+
+	void dateFieldChange(Event event){
+		LocalDate selectedDate = dateField.getValue();
+		LocalDate currentDate = LocalDate.now();
+		if (selectedDate.isAfter(currentDate)) {
+			dateField.setStyle("-fx-control-inner-background: #fff");
+		} else {
+			dateField.setStyle("-fx-control-inner-background: #f55");
+		}
+	}	
 	
 }

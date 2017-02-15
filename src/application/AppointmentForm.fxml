@@ -63,6 +63,7 @@
       		showWeekNumbers="true"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="2"
+      		onAction="#dateFieldChange"
       		/>
       
       	<Label
