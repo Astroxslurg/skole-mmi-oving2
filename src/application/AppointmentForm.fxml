@@ -45,11 +45,12 @@
    			GridPane.rowIndex="1"
    			/>
        	<TextField
-       		fx:id="emailField"
+       		fx:id="roomField"
        		prefColumnCount="30"
        		promptText="Bygning + rom"
        		GridPane.columnIndex="1"
        		GridPane.rowIndex="1"
+       		onFocusedChange="#roomFieldChange"
        		/>
        	
        	<Label
