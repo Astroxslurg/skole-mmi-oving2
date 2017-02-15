@@ -19,7 +19,7 @@ public class AppointmentFormController {
 
 	
 	@FXML TextField purposeField;
-	@FXML TextField emailField;
+	@FXML TextField roomField;
 	@FXML DatePicker dateField;
 	@FXML TextField startTime;
 	@FXML TextField stopTime;
@@ -28,18 +28,40 @@ public class AppointmentFormController {
 	@FXML TextField freqReservations;
 	
 	@FXML
+	void roomFieldChange(Event event) {
+		boolean isMatch = Pattern.matches("(\\w|\\s|-)+?\\s(\\d)+", roomField.getText());
+		if (isMatch) {
+			roomField.setStyle("-fx-control-inner-background: #fff");
+		} else {
+			roomField.setStyle("-fx-control-inner-background: #f55");
+		}
+	}
+	
+	@FXML
 	void checkBoxChange(Event event) {
 		antReservations.setDisable(!repetitionCheckbox.isSelected());
 		freqReservations.setDisable(!repetitionCheckbox.isSelected());
 	}
 	
 	@FXML
-	void nameFieldChange(Event event) {
-		boolean b = Pattern.matches("\\d", antReservations.getText());
-			if (b) {
-				System.out.println(antReservations.getText());
+	void antReservationsFieldChange(Event event) {
+		boolean b = Pattern.matches("\\d+", antReservations.getText());
+			if (!b) {
+				antReservations.setStyle("-fx-control-inner-background: #f55");
+			} else {
+				antReservations.setStyle("-fx-control-inner-background: #ffffff");
 			}
 	}
+	
+	@FXML
+	void freqReservationsFieldChange(Event event) {
+		boolean b = Pattern.matches("\\d+", freqReservations.getText());
+			if (!b) {
+				freqReservations.setStyle("-fx-control-inner-background: #f55");
+			} else {
+				freqReservations.setStyle("-fx-control-inner-background: #ffffff");
+			}
+	}	
 	
 	@FXML
 	void startTimeChange(Event event) {

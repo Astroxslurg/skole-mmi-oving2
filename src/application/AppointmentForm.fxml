@@ -45,11 +45,12 @@
    			GridPane.rowIndex="1"
    			/>
        	<TextField
-       		fx:id="emailField"
+       		fx:id="roomField"
        		prefColumnCount="30"
        		promptText="Bygning + rom"
        		GridPane.columnIndex="1"
        		GridPane.rowIndex="1"
+       		onFocusedChange="#roomFieldChange"
        		/>
        	
        	<Label
@@ -82,12 +83,14 @@
       		onFocusedChange="#startTimeChange"
       		GridPane.columnIndex="0"
       		GridPane.rowIndex="4"
+      		promptText="eks: 09:15"
       		/>
       	<TextField
       		fx:id="stopTime"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="4"
       		onFocusedChange="#stopTimeChange"
+      		promptText="eks: 14:00"
       		/>
       		
       	<Label
@@ -113,7 +116,7 @@
       		promptText="antall"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="6"
-      		onFocusedChange="#nameFieldChange"
+      		onFocusedChange="#antReservationsFieldChange"
       		/>
       	
       	<Label
@@ -128,6 +131,7 @@
       		promptText="frekvens"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="7"
+      		onFocusedChange="#freqReservationsFieldChange"
       		/>
    	</children>
 </GridPane>
