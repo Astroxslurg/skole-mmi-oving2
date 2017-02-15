@@ -65,8 +65,7 @@ public class Appointment {
 	};
 
 	public String getFormal() {
-		return "yolo";
-		// return formalProperty.getValue();
+		return formalProperty.getValue();
 	}
 
 	public void setFormal(String formal) {
