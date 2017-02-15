@@ -12,15 +12,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Button?>
 
-<GridPane hgap="20" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children fx:controller="AppointmentFormController">
+<GridPane fx:controller="application.AppointmentFormController" hgap="20" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
    	<Label text="Formål:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
        <TextField fx:id="purposeField" prefColumnCount="30" promptText="Formål" GridPane.columnIndex="1" GridPane.rowIndex="0" />
    	<Label fx:id="nameFieldRule" text="Names can only contain letters, space ..." visible="false" GridPane.columnIndex="2" GridPane.rowIndex="0" />
    	<Label text="Rom:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
        <TextField fx:id="emailField" prefColumnCount="30" promptText="Bygning + rom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
        <Label text="Dato:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-      <DatePicker fx:id="dateField"promptText="velg startdato" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <DatePicker fx:id="dateField" promptText="velg startdato" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="start-tid" GridPane.columnIndex="0" GridPane.rowIndex="3" />
       <Label text="slutt-tid" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <TextField fx:id="startTime" GridPane.columnIndex="0" GridPane.rowIndex="4" />
