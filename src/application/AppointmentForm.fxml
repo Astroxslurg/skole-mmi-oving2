@@ -78,6 +78,7 @@
       		
       	<TextField
       		fx:id="startTime"
+      		onFocusedChange="#startTimeChange"
       		GridPane.columnIndex="0"
       		GridPane.rowIndex="4"
       		/>
