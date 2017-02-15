@@ -1,6 +1,9 @@
 package application;
 
 import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.time.LocalDate;
 
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -34,5 +37,36 @@ public class AppointmentFormController {
 				System.out.println(antReservations.getText());
 			}
 	}
+	
+	@FXML
+	void startTimeChange(Event event) {
+		//String currentTextInField = startTime.getText();
+		//if(currentTextInField.length() != 5) {
+		//	startTime.setStyle("-fx-control-inner-background: #ff0000");
+		//} else {
+		//startTime.setStyle("-fx-control-inner-background: #ffffff");
+		//}
+		//System.out.println(startTime.getText());
+		
+		String currentTextInField = startTime.getText();
+		String pattern = "\\d\\d:\\d\\d";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(currentTextInField);
+		if (!m.matches()) {
+			startTime.setStyle("-fx-control-inner-background: #ff0000");
+		} else {
+			startTime.setStyle("-fx-control-inner-background: #ffffff");
+		}
+	}
+
+	void dateFieldChange(Event event){
+		LocalDate selectedDate = dateField.getValue();
+		LocalDate currentDate = LocalDate.now();
+		if (selectedDate.isAfter(currentDate)) {
+			dateField.setStyle("-fx-control-inner-background: #fff");
+		} else {
+			dateField.setStyle("-fx-control-inner-background: #f55");
+		}
+	}	
 	
 }
