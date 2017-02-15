@@ -113,7 +113,7 @@
       		promptText="antall"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="6"
-      		onFocusedChange="#nameFieldChange"
+      		onFocusedChange="#antReservationsFieldChange"
       		/>
       	
       	<Label
@@ -128,6 +128,7 @@
       		promptText="frekvens"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="7"
+      		onFocusedChange="#freqReservationsFieldChange"
       		/>
    	</children>
 </GridPane>
