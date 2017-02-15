@@ -1,5 +1,6 @@
 package application;
 
+import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.time.LocalDate;
@@ -27,6 +28,14 @@ public class AppointmentFormController {
 	void checkBoxChange(Event event) {
 		antReservations.setDisable(!repetitionCheckbox.isSelected());
 		freqReservations.setDisable(!repetitionCheckbox.isSelected());
+	}
+	
+	@FXML
+	void nameFieldChange(Event event) {
+		boolean b = Pattern.matches("\\d", antReservations.getText());
+			if (b) {
+				System.out.println(antReservations.getText());
+			}
 	}
 	
 	@FXML

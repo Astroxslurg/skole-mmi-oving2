@@ -112,6 +112,7 @@
       		promptText="antall"
       		GridPane.columnIndex="1"
       		GridPane.rowIndex="6"
+      		onFocusedChange="#nameFieldChange"
       		/>
       	
       	<Label
