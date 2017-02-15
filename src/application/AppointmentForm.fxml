@@ -22,7 +22,7 @@
        <Label text="Dato:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
       <DatePicker promptText="velg startdato" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="start-tid" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-      <Label text="start-tid" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="slutt-tid" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <TextField GridPane.columnIndex="0" GridPane.rowIndex="4" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Label text="Repeter Reservasjon" GridPane.rowIndex="5" />
