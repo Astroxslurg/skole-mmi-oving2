@@ -76,22 +76,26 @@ public class AppointmentFormController {
 		}
 	}
 	
-	//Fiks regex og pass på at man ikke får exception.
 	@FXML
 	void stopTimeChange(Event event) {
 		String startTimeString = startTime.getText();
-		int startHours = Integer.parseInt(startTimeString.substring(0,2));
-		int startMinutes = Integer.parseInt(startTimeString.substring(3,4));
-		LocalTime localStartTime = LocalTime.of(startHours, startMinutes);
 		String stopTimeString = stopTime.getText();
-		int stopHours = Integer.parseInt(stopTimeString.substring(0,2));
-		int stopMinutes = Integer.parseInt(stopTimeString.substring(3,4));
-		LocalTime localStopTime = LocalTime.of(startHours, startMinutes);
-		if (localStopTime.isAfter(localStartTime)) {
-			stopTime.setStyle("-fx-control-inner-background: #ff0000");
+		if (startTimeString.length() == 5 && stopTimeString.length() == 5) {
+			int startHours = Integer.parseInt(startTimeString.substring(0,2));
+			int startMinutes = Integer.parseInt(startTimeString.substring(3,4));
+			LocalTime localStartTime = LocalTime.of(startHours, startMinutes);
+			int stopHours = Integer.parseInt(stopTimeString.substring(0,2));
+			int stopMinutes = Integer.parseInt(stopTimeString.substring(3,4));
+			LocalTime localStopTime = LocalTime.of(stopHours, stopMinutes);
+			if (localStartTime.isAfter(localStopTime)) {
+				stopTime.setStyle("-fx-control-inner-background: #ff0000");
+			} else {
+				stopTime.setStyle("-fx-control-inner-background: #ffffff");
+			}
 		} else {
-			stopTime.setStyle("-fx-control-inner-background: #ffffff");
+			stopTime.setStyle("-fx-control-inner-background: #ff0000");
 		}
+		
 	}
 	
 	@FXML
