@@ -133,5 +133,14 @@
       		GridPane.rowIndex="7"
       		onFocusedChange="#freqReservationsFieldChange"
       		/>
+	   	<Label
+	   		fx:id="finishedAt"
+	   		text="Repetisjonsfrekvens"
+	   		GridPane.columnIndex="0"
+	   		GridPane.rowIndex="7"
+	   		disable="true"
+	   		onFocusedChange="#antReservationsFieldChange"
+	   		onFocusedChange="#freqReservationsFieldChange"
+	   		/>
    	</children>
 </GridPane>
