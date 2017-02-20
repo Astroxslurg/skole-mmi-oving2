@@ -1,8 +1,12 @@
 package application;
 
 import java.util.regex.Pattern;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -118,9 +122,27 @@ public class AppointmentFormController {
 		String freqResFieldValue = freqReservations.getText();
 		if (antResFieldValue.length() != 0 && freqResFieldValue.length() != 0) {
 			finishedAt.setVisible(true);
-			finishedAt.setText("Reservasjonen er klar: ");
+			Calendar now = Calendar.getInstance();
+			LocalDate startDate = dateField.getValue();
+			System.out.println(startDate.getYear());
+			System.out.println(startDate.getMonthValue());
+			System.out.println(startDate.getDayOfMonth());
+			Date newDate = new Date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth());
+			now.setTime(newDate);
+			System.out.println(newDate.getDay());
+			System.out.println(newDate.getMonth());
+			System.out.println(newDate.getYear());
+//			DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+//			now.add(dateField.getValue().getDayOfMonth(), Integer.parseInt(antResFieldValue) * 
+//					Integer.parseInt(freqResFieldValue));			
+			now.add(Calendar.DATE, Integer.parseInt(antResFieldValue) * 
+					Integer.parseInt(freqResFieldValue));
+//			String dateString = df.format(now.getTime());
+//			finishedAt.setText("Reservasjonen er klar: " + dateString);
+			finishedAt.setText("Reservasjonen er klar: " + now.getTime());
 		} else {
 			finishedAt.setVisible(false);
 		}
+		
 	}
 }
