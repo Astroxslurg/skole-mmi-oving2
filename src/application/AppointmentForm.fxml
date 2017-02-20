@@ -135,12 +135,10 @@
       		/>
 	   	<Label
 	   		fx:id="finishedAt"
-	   		text="Repetisjonsfrekvens"
+	   		text=""
 	   		GridPane.columnIndex="0"
-	   		GridPane.rowIndex="7"
+	   		GridPane.rowIndex="8"
 	   		disable="true"
-	   		onFocusedChange="#antReservationsFieldChange"
-	   		onFocusedChange="#freqReservationsFieldChange"
 	   		/>
    	</children>
 </GridPane>
