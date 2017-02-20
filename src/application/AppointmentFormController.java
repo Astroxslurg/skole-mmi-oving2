@@ -13,6 +13,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class AppointmentFormController {
@@ -26,6 +27,7 @@ public class AppointmentFormController {
 	@FXML CheckBox repetitionCheckbox;
 	@FXML TextField antReservations;
 	@FXML TextField freqReservations;
+	@FXML Label finishedAt;
 	
 	@FXML
 	void roomFieldChange(Event event) {
@@ -109,4 +111,14 @@ public class AppointmentFormController {
 		}
 	}	
 	
+	void makeFinishDateVisibleIfValidState() {
+		String antResFieldValue = antReservations.getText();
+		String freqResFieldValue = freqReservations.getText();
+		if (! (antResFieldValue.isEmpty() && freqResFieldValue.isEmpty())) {
+			finishedAt.setVisible(true);
+			finishedAt.setText("Reservasjonen er klar: ");
+		} else {
+			finishedAt.setVisible(false);
+		}
+	}
 }
