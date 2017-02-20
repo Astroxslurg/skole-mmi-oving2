@@ -53,6 +53,7 @@ public class AppointmentFormController {
 			} else {
 				antReservations.setStyle("-fx-control-inner-background: #ffffff");
 			}
+		makeFinishDateVisibleIfValidState();
 	}
 	
 	@FXML
@@ -63,6 +64,7 @@ public class AppointmentFormController {
 			} else {
 				freqReservations.setStyle("-fx-control-inner-background: #ffffff");
 			}
+		makeFinishDateVisibleIfValidState();
 	}	
 	
 	@FXML
@@ -114,7 +116,7 @@ public class AppointmentFormController {
 	void makeFinishDateVisibleIfValidState() {
 		String antResFieldValue = antReservations.getText();
 		String freqResFieldValue = freqReservations.getText();
-		if (! (antResFieldValue.isEmpty() && freqResFieldValue.isEmpty())) {
+		if (antResFieldValue.length() != 0 && freqResFieldValue.length() != 0) {
 			finishedAt.setVisible(true);
 			finishedAt.setText("Reservasjonen er klar: ");
 		} else {
